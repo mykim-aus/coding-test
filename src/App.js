@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import AutoCorrect from "./components/AutoCorrect";
+import Inventory from "./components/Inventory"
+
 import './App.css';
 
 function App() {
+  const corrections = {
+    'reley' : 'really',
+    'rect' : 'react'
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AutoCorrect corrections={corrections}/>
+      <Inventory/>
     </div>
   );
 }
